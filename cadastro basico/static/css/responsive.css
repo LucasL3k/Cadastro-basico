@@ -1,0 +1,557 @@
+/* Responsive rules use explicit root specificity to override base styles. */
+@media (max-width: 1150px) {
+  html body .sidebar {
+    width: 200px;
+    padding: 30px 16px 22px;
+  }
+  html body .workspace {
+    margin-left: 200px;
+  }
+  html body main {
+    padding: 38px 28px 24px;
+  }
+  html body .topbar {
+    padding: 0 28px;
+  }
+  html body .brand {
+    margin-left: 0;
+    font-size: 22px;
+  }
+  html body .brand-sub {
+    font-size: 7px;
+    letter-spacing: 1.4px;
+  }
+  html body .brand-mark {
+    width: 39px;
+    height: 42px;
+  }
+  html body th:nth-child(3),
+  html body td:nth-child(3) {
+    display: none;
+  }
+  html body th:first-child {
+    width: 31%;
+  }
+  html body th:nth-child(2) {
+    width: 35%;
+  }
+  html body th:nth-child(4) {
+    width: 16%;
+  }
+  html body th:last-child {
+    width: 112px;
+  }
+  html body .page-heading h1 {
+    font-size: 31px;
+  }
+  html body .directory-title {
+    padding: 23px 22px;
+  }
+  html body .toolbar {
+    padding: 0 22px 20px;
+  }
+  html body .list-meta {
+    padding: 0 22px;
+  }
+}
+@media (max-width: 800px) {
+  html body .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    padding: 20px 24px 16px;
+    gap: 20px;
+    overflow: visible;
+  }
+  html body .brand {
+    margin: 0;
+    font-size: 25px;
+    gap: 9px;
+  }
+  html body .workspace-navigation {
+    flex-direction: row;
+    gap: 10px;
+  }
+  html body .workspace-navigation .nav-item {
+    flex: 1;
+    min-width: 0;
+  }
+  html body .brand-mark {
+    width: 33px;
+    height: 35px;
+    font-size: 30px;
+    border-radius: 9px;
+  }
+  html body .brand-mark span {
+    height: 4px;
+    width: 4px;
+    right: 6px;
+    bottom: 6px;
+  }
+  html body .brand-sub {
+    font-size: 6px;
+    margin-top: 5px;
+    letter-spacing: 1.4px;
+  }
+  html body .nav-label,
+  html body .sidebar-note,
+  html body .sidebar-footer {
+    display: none;
+  }
+  html body .nav-item {
+    padding: 10px 14px;
+    font-size: 11px;
+    gap: 9px;
+  }
+  html body .nav-item .icon {
+    width: 16px;
+    height: 16px;
+  }
+  html body .nav-count {
+    font-size: 9px;
+  }
+  html body .workspace {
+    margin-left: 0;
+    min-height: calc(100vh - 70px);
+  }
+  html body .topbar {
+    height: 56px;
+    padding: 0 25px;
+  }
+  html body main {
+    padding: 32px 25px 22px;
+  }
+  html body .page-heading {
+    margin-bottom: 28px;
+  }
+  html body .page-heading h1 {
+    font-size: 29px;
+  }
+  html body .page-heading p {
+    font-size: 11px;
+  }
+  html body .page-heading .button {
+    font-size: 11px;
+    padding: 11px 13px;
+  }
+  html body .page-heading .eyebrow {
+    font-size: 8px;
+  }
+  html body .detail-topbar {
+    padding: 0 24px;
+    height: 65px;
+  }
+  html body .detail-main {
+    padding: 35px 24px;
+  }
+  html body .detail-hero {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 25px;
+  }
+  html body .detail-identity h1 {
+    font-size: 26px;
+  }
+  html body .detail-grid {
+    gap: 16px;
+  }
+  html body .detail-card dl {
+    grid-template-columns: 1fr;
+  }
+  html body .toast-stack {
+    right: 16px;
+    bottom: 86px;
+    max-width: calc(100vw - 32px);
+  }
+  html body dialog .toast-stack {
+    bottom: 16px;
+  }
+}
+@media (max-width: 560px) {
+  html body .sidebar {
+    padding: 18px 16px 14px;
+  }
+  html body .nav-item {
+    padding: 10px;
+    font-size: 11px;
+    gap: 7px;
+  }
+  html body .floating-create {
+    right: max(16px, env(safe-area-inset-right));
+    bottom: max(16px, env(safe-area-inset-bottom));
+    min-height: 50px;
+    padding: 14px 19px;
+    font-size: 12px;
+  }
+  html body .footer-message {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+  html body .topbar {
+    padding: 0 20px;
+    height: 49px;
+  }
+  html body .breadcrumb {
+    font-size: 10px;
+    gap: 11px;
+  }
+  html body .local-label {
+    font-size: 0;
+    border: 0;
+    padding: 5px;
+    background: transparent;
+  }
+  html body .local-label .icon {
+    width: 15px;
+    height: 15px;
+  }
+  html body main {
+    padding: 28px 16px 20px;
+  }
+  html body .page-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 21px;
+    margin-bottom: 24px;
+  }
+  html body .page-heading h1 {
+    font-size: 30px;
+  }
+  html body .page-heading p {
+    font-size: 11px;
+    line-height: 1.8;
+    max-width: 275px;
+    margin-top: 10px;
+  }
+  html body .page-heading .button {
+    width: 100%;
+    min-height: 43px;
+  }
+  html body .directory-title {
+    padding: 20px 16px;
+  }
+  html body .directory-title h2 {
+    font-size: 12px;
+  }
+  html body .directory-title > div {
+    gap: 7px;
+  }
+  html body .sort-note {
+    font-size: 0;
+    gap: 0;
+  }
+  html body .sort-note .icon {
+    width: 17px;
+    height: 17px;
+  }
+  html body .toolbar {
+    padding: 0 14px 18px;
+    gap: 8px;
+  }
+  html body .toolbar > .button {
+    font-size: 0;
+    padding: 10px;
+    gap: 0;
+    min-width: 42px;
+    position: relative;
+  }
+  html body .toolbar > .button .icon {
+    width: 19px;
+    height: 19px;
+  }
+  html body .filter-dot {
+    position: absolute;
+    right: 6px;
+    top: 6px;
+  }
+  html body .search-box input {
+    font-size: 10px;
+    padding-left: 35px;
+    padding-right: 10px;
+  }
+  html body .search-box > [data-icon] {
+    width: 16px;
+    height: 16px;
+    left: 11px;
+  }
+  html body .search-box kbd {
+    display: none;
+  }
+  html body .filters {
+    margin: 0 14px 20px;
+    flex-wrap: wrap;
+    padding: 14px;
+    gap: 12px;
+  }
+  html body .filters label {
+    min-width: 100px;
+  }
+  html body .filters .text-button {
+    flex-basis: 100%;
+    font-size: 11px;
+  }
+  html body .list-meta {
+    padding: 0 16px;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0;
+  }
+  html body .tabs {
+    width: 100%;
+    justify-content: space-between;
+    gap: 5px;
+  }
+  html body .tab {
+    font-size: 10px;
+  }
+  html body #results-label {
+    padding: 12px 0 13px;
+    font-size: 9px;
+  }
+  html body table,
+  html body tbody {
+    display: block;
+  }
+  html body thead {
+    display: none;
+  }
+  html body tbody tr {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    padding: 18px 16px;
+    border-bottom: 1px solid #f5eaec;
+    gap: 12px 8px;
+  }
+  html body tbody tr:last-child {
+    border-bottom: 0;
+  }
+  html body td {
+    display: block;
+    border: 0;
+    padding: 0 !important;
+  }
+  html body td:first-child {
+    grid-column: 1;
+    grid-row: 1;
+  }
+  html body td:nth-child(2) {
+    grid-column: 1;
+    grid-row: 2;
+    padding-left: 51px !important;
+  }
+  html body td:nth-child(4) {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+  }
+  html body td:last-child {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: center;
+  }
+  html body .row-actions {
+    gap: 3px;
+  }
+  html body .row-actions .icon-button {
+    min-height: 32px;
+    min-width: 28px;
+    padding: 6px;
+  }
+  html body .customer-name {
+    font-size: 13px;
+  }
+  html body .contact-line {
+    font-size: 11px;
+  }
+  html body .contact-line .icon {
+    display: none;
+  }
+  html body .customer-id {
+    font-size: 10px;
+  }
+  html body .avatar {
+    width: 39px;
+    height: 39px;
+  }
+  html body .list-footer {
+    padding: 14px 16px;
+    font-size: 8px;
+    gap: 6px;
+  }
+  html body .list-footer > span:last-child {
+    font-size: 0;
+    gap: 0;
+  }
+  html body .list-state {
+    min-height: 350px;
+    padding: 25px 20px 35px;
+  }
+  html body .list-state h3 {
+    font-size: 16px;
+  }
+  html body .list-state p {
+    font-size: 11px;
+  }
+  html body .empty-illustration {
+    transform: scale(0.88);
+    margin-bottom: 6px;
+  }
+  html body .page-footer {
+    font-size: 8px;
+  }
+  html body .page-footer > span:last-child {
+    font-size: 6px;
+    letter-spacing: 0.6px;
+  }
+  html body .editor-dialog {
+    width: 100%;
+    max-width: 100%;
+    height: 100dvh;
+    max-height: 100dvh;
+    border: 0;
+    border-radius: 0;
+    margin: 0;
+  }
+  html body .dialog-header {
+    padding: 22px 20px;
+  }
+  html body .dialog-header h2 {
+    font-size: 23px;
+  }
+  html body .form-body {
+    padding: 22px 20px 8px;
+  }
+  html body .form-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  html body .address-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  html body .address-grid .field {
+    grid-column: span 2;
+  }
+  html body .address-grid [data-field="cep"],
+  html body .address-grid [data-field="numero"],
+  html body .address-grid [data-field="uf"] {
+    grid-column: span 1;
+  }
+  html body .address-grid [data-field="cidade"] {
+    grid-column: span 1;
+  }
+  html body .cep-help {
+    grid-column: span 1;
+    padding-left: 0;
+    font-size: 9px;
+  }
+  html body .cep-help > .icon {
+    display: none;
+  }
+  html body .section-heading {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  html body .section-heading p {
+    font-size: 9px;
+  }
+  html body .section-heading h3 {
+    font-size: 11px;
+  }
+  html body .dialog-footer {
+    padding: 15px 20px;
+    flex-direction: column;
+    gap: 12px;
+  }
+  html body .dialog-footer p {
+    font-size: 9px;
+    max-width: none;
+    width: 100%;
+  }
+  html body .dialog-footer > div {
+    width: 100%;
+  }
+  html body .dialog-footer .button {
+    flex: 1;
+    min-height: 42px;
+  }
+  html body .field input,
+  html body .field select,
+  html body .field textarea {
+    font-size: 16px;
+  }
+  html body .confirm-dialog {
+    padding: 25px;
+  }
+  html body .confirm-actions {
+    flex-direction: column-reverse;
+  }
+  html body .confirm-actions .button {
+    width: 100%;
+  }
+  html body .detail-topbar {
+    padding: 0 18px;
+    height: 62px;
+  }
+  html body .detail-topbar .text-button {
+    font-size: 11px;
+  }
+  html body .detail-breadcrumb {
+    display: none;
+  }
+  html body .detail-main {
+    padding: 30px 20px;
+  }
+  html body .detail-identity {
+    gap: 14px;
+  }
+  html body .avatar-large {
+    width: 64px;
+    height: 64px;
+    border-radius: 18px;
+    font-size: 22px;
+  }
+  html body .detail-identity h1 {
+    font-size: 23px;
+  }
+  html body .detail-actions {
+    width: 100%;
+  }
+  html body .detail-actions .button {
+    flex: 1;
+  }
+  html body .detail-hero {
+    margin-bottom: 28px;
+  }
+  html body .detail-grid {
+    grid-template-columns: 1fr;
+  }
+  html body .notes-card {
+    grid-column: 1;
+  }
+  html body .detail-card dl {
+    grid-template-columns: 1fr 1fr;
+    gap: 22px 14px;
+    padding: 22px;
+  }
+  html body .detail-field dd {
+    font-size: 11px;
+  }
+  html body .detail-card h2 {
+    padding: 20px 22px;
+  }
+  html body .notes-text {
+    padding: 22px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *:before,
+  *:after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

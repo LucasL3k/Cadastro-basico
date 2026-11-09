@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#501923" />
+    <meta
+      name="description"
+      content="Vermelho. Cadastro de clientes e empresas. Busque de forma rápida seus contatos."
+    />
+    <title>Vermelho · Cadastro de clientes e empresas</title>
+    <link rel="icon" type="image/svg+xml" href="/static/favicon.svg" />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+    <script type="module" src="/static/js/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <aside class="sidebar" aria-label="Navegação principal">
+      <a class="brand" href="#clientes" aria-label="Vermelho, página inicial"
+        ><img
+          class="brand-mark"
+          src="/static/favicon.svg"
+          alt=""
+          width="44"
+          height="44"
+        />
+        <span
+          >Vermelho<span class="brand-sub">CLIENTES E EMPRESAS</span></span
+        ></a
+      >
+      <div class="nav-label">ÁREA DE TRABALHO</div>
+      <nav class="workspace-navigation" aria-label="Área de trabalho">
+        <a
+          class="nav-item active"
+          href="#clientes"
+          data-directory="clientes"
+          aria-current="page"
+          ><span data-icon="users"></span><span>Clientes</span
+          ><span class="nav-count" id="nav-count">0</span></a
+        >
+        <a class="nav-item" href="#fornecedores" data-directory="fornecedores">
+          <span data-icon="building"></span><span>Fornecedores</span
+          ><span class="nav-count" id="supplier-count">0</span>
+        </a>
+      </nav>
+      <div class="sidebar-note">
+        <span class="note-symbol" data-icon="contact"></span>
+        <h2>Cadastro de clientes<br />e empresas</h2>
+        <p>Busque de forma rápida<br />seus contatos</p>
+        <div class="note-lines"><i></i><i></i><i></i></div>
+      </div>
+      <div class="sidebar-footer">
+        <span class="local-dot"></span
+        ><span>Seu espaço local<small>Simples. Organizado. Seu.</small></span>
+      </div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar">
+        <div class="breadcrumb">
+          Área de trabalho <span>/</span>
+          <strong id="breadcrumb-current">Clientes</strong>
+        </div>
+        <span class="local-label"
+          ><span data-icon="database"></span>Armazenamento local</span
+        >
+      </header>
+      <main id="conteudo">
+        <div class="page-heading">
+          <div>
+            <div class="eyebrow">CADA CONTATO IMPORTA</div>
+            <h1 id="page-title">Seus clientes<span>.</span></h1>
+            <p id="page-description">
+              Organize informações e mantenha seus contatos por perto.
+            </p>
+          </div>
+        </div>
+        <section class="directory" aria-labelledby="directory-heading">
+          <div class="directory-title">
+            <div>
+              <span
+                class="title-icon"
+                id="directory-icon"
+                data-icon="users"
+              ></span>
+              <h2 id="directory-heading">Lista de clientes</h2>
+              <span id="total-count" class="count-badge">0</span>
+            </div>
+            <span class="sort-note"
+              ><span data-icon="sort"></span>Ordem alfabética</span
+            >
+          </div>
+          <div class="toolbar">
+            <div class="search-box">
+              <span data-icon="search"></span
+              ><input
+                id="search"
+                type="search"
+                placeholder="Buscar por nome, sobrenome ou e-mail..."
+                aria-label="Buscar por nome, sobrenome ou e-mail"
+                autocomplete="off"
+              /><kbd aria-hidden="true">⌕</kbd>
+            </div>
+            <button
+              class="button secondary"
+              id="filter-toggle"
+              aria-expanded="false"
+              aria-controls="filters"
+            >
+              <span data-icon="filter"></span>Filtros<span
+                class="filter-dot"
+                hidden
+              ></span>
+            </button>
+          </div>
+          <div class="filters" id="filters" hidden>
+            <label
+              >Cidade<select id="filter-city">
+                <option value="">Todas as cidades</option>
+              </select></label
+            ><label
+              >Estado<select id="filter-state">
+                <option value="">Todos os estados</option>
+              </select></label
+            ><button id="clear-filters" class="text-button" type="button">
+              Limpar filtros
+            </button>
+          </div>
+          <div class="list-meta">
+            <div
+              class="tabs"
+              role="group"
+              aria-label="Filtrar por preenchimento"
+            >
+              <button class="tab active" data-status="all" aria-pressed="true">
+                Todos <span id="count-all">0</span></button
+              ><button class="tab" data-status="complete" aria-pressed="false">
+                Completos <span id="count-complete">0</span></button
+              ><button class="tab" data-status="pending" aria-pressed="false">
+                Pendentes <span id="count-pending">0</span>
+              </button>
+            </div>
+            <span id="results-label" aria-live="polite"
+              >Carregando clientes…</span
+            >
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col" id="identity-heading">
+                    CLIENTE <span data-icon="arrow-down"></span>
+                  </th>
+                  <th scope="col">CONTATO</th>
+                  <th scope="col">LOCALIZAÇÃO</th>
+                  <th scope="col">CADASTRO</th>
+                  <th scope="col" class="actions-heading">AÇÕES</th>
+                </tr>
+              </thead>
+              <tbody id="customer-rows"></tbody>
+            </table>
+          </div>
+          <div id="list-state" class="list-state" role="status">
+            <div class="loading-ring"></div>
+            <p>Carregando seus clientes…</p>
+          </div>
+          <footer class="list-footer">
+            <span id="footer-count">Seus contatos, sempre organizados.</span
+            ><span><span class="tiny-dot"></span>Atualização automática</span>
+          </footer>
+        </section>
+        <footer class="page-footer">
+          <div class="footer-message">
+            <span>Cadastro de clientes e empresas</span
+            ><span>Busque de forma rápida seus contatos</span>
+          </div>
+          <span class="footer-brand">VERMELHO</span>
+        </footer>
+      </main>
+    </div>
+    <button
+      class="button primary floating-create"
+      id="new-record"
+      data-action="new"
+      type="button"
+    >
+      <span data-icon="plus"></span>Novo cadastro
+    </button>
+    <dialog id="editor" class="editor-dialog" aria-labelledby="editor-title">
+      <div id="editor-content"></div>
+    </dialog>
+    <dialog id="details" class="detail-dialog" aria-labelledby="detail-title">
+      <div id="detail-content"></div>
+    </dialog>
+    <dialog
+      id="confirmation"
+      class="confirm-dialog"
+      aria-labelledby="confirm-title"
+      aria-describedby="confirm-description"
+    >
+      <div id="confirm-content"></div>
+    </dialog>
+    <div
+      id="toasts"
+      class="toast-stack"
+      aria-live="polite"
+      aria-atomic="true"
+    ></div>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+import { directoryApi } from "./api.js";
+import { fields, validate } from "./validation.js";
+import { supplierFields, validateSupplier } from "./supplier-validation.js";
+
+// View-specific data; the controller and components are shared by both directories.
+export const directories = {
+  clientes: {
+    key: "clientes",
+    label: "Clientes",
+    singular: "cliente",
+    title: "Seus clientes",
+    icon: "users",
+    description: "Organize informações e mantenha seus contatos por perto.",
+    search: "Buscar por nome, sobrenome ou e-mail",
+    searchFields: ["nome", "sobrenome", "email"],
+    fields,
+    validate,
+    api: directoryApi("clientes"),
+    section: "Dados pessoais",
+    identityLabel: "Nome",
+    identityPlaceholder: "Ex.: Ana",
+    secondField: "sobrenome",
+    secondPlaceholder: "Ex.: Oliveira",
+    notesField: "observacoes",
+    notesTitle: "Observações",
+    notesHint: "Os detalhes também importam.",
+    notesPlaceholder: "Informações importantes sobre este cliente…",
+  },
+  fornecedores: {
+    key: "fornecedores",
+    label: "Fornecedores",
+    singular: "fornecedor",
+    title: "Seus fornecedores",
+    icon: "building",
+    description: "Encontre empresas e saiba o que cada uma fornece.",
+    search: "Buscar por empresa, CNPJ, e-mail ou fornecimento",
+    searchFields: ["nome", "cnpj", "email", "fornecimento"],
+    fields: supplierFields,
+    validate: validateSupplier,
+    api: directoryApi("fornecedores"),
+    section: "Dados da empresa",
+    identityLabel: "Empresa / razão social",
+    identityPlaceholder: "Ex.: Aurora Materiais Ltda.",
+    secondField: "cnpj",
+    secondPlaceholder: "00.000.000/0000-00",
+    notesField: "fornecimento",
+    notesTitle: "O que a empresa fornece",
+    notesHint: "Produtos e serviços deste fornecedor.",
+    notesPlaceholder: "Ex.: materiais de escritório, embalagens, manutenção…",
+  },
+};
