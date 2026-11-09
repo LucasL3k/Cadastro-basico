@@ -1,0 +1,51 @@
+1º Prompt
+
+Crie um sistema web completo e funcional onde deverá ser para cadastro de clientes, com interface moderno, intuitiva, responsiva e visual bonito (usar tons azul)
+painel inicial deverá conter os seguintes elementos:
+Empresa se chamará “Azul”
+listar todos os clientes cadastrados
+barra de pesquisa funcional por nome, sobrenome ou e-mail
+ter filtros de pesquisa 
+botão para fazer "Novo Cadastro"
+Botões para visualizar em tela cheia, editar ou excluir clientes
+Sempre solicitar confirmação antes de excluir
+Cadastro de clientes:
+Devera tem campos de nome sobrenome, telefone, e-mail, endereço (com buscador de CEP), observações
+permitir cadastrar, visualizar, editar e excluir.
+validar todos os campos com respectivos formatos, como telefone (xx)xxxxx-xxxx, email com @algumacoisa.com
+sempre colocar em vermelho campos não preenchidos e se tem certeza que quer salvar cadastro faltando campos
+sempre atualizar automaticamente a listagem após novo cadastro, sempre priorizando ordem alfabética 
+Banco de dados deverá ser salvo em SQLite local, armazenado dentro do arquivo
+garantir que os registros sempre sejam salvos
+interface do sistema web:
+Utilizar tons azul e designer como profissional UX
+garantir que todos os botões e funcionalidades sejam funcionais
+separar interface, logica e estilos por responsabilidade
+sempre utilizar funções claras e componentes reutilizáveis
+*não implemente funcionalidade extras além das solicitadas*
+crie um readme com instruções para instalação, execução e testes
+verifique o funcionamento do sistema e me informe se foi testado 
+
+2º Prompt
+
+Vamos alterar o nome da empresa para "Vermelho" junto com a logo e toda interface que represente o nome da empresa
+Alterar identidade visual do sistema para tons em vermelho
+preservar estrutura e o projeto
+
+Botão de novo cadastro que deverá já estar em vermelho também junto com o sistema, devera alterar de posição, irá criar um botão flutuante no canto inferior a direita
+
+no rodapé vamos alterar a frase para
+Cadastro de clientes e empresas
+Busque de forma rápida seus contatos
+
+
+
+na área de trabalho vamos acrescentar a aba "Fornecedores"
+e vamos acrescentar também no banco de dados informações para cadastro de empresa com CNPJ, endereço, Email, telefone e o que a empresa fornece
+
+não alterar os dados no nosso sistema, não alterar os dados que já existem, mantendo a regra de código limpo e modulável
+
+
+após implementar atualizar o REDME com as novas funcionalidades
+informar resumidamente os arquivos que foram modificados
+Testar a nova identidade visual e o botão flutuante
